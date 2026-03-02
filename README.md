@@ -29,11 +29,11 @@
 <br />
 <p align="center">
   <a href="https://github.com/HansDoh2404/basic_mongo_db_cluster_with_k8s.git">
-  <img src="./greatex.png" alt="archi" width="150" height="150">
+  <img src="./greatex.png" alt="archi" width="300" height="300">
   </a>
 </p>
 
-**Data validation with great_expectations** : This project demonstrates how to use great_expectations to set up rules and validate a dataset befor using it in more complex workflow.
+**Data validation with great_expectations** : This project demonstrates how to use great_expectations to set up rules and validate a dataset before using it in more complex workflow.
 
 
 ## Overview
