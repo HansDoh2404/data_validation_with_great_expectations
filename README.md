@@ -57,7 +57,7 @@
   </p> -->
 </div>
 
-#### Set up a GX environment
+### Set up a GX environment
 
 You use a **Data Context** to define and run a GX workflow. The Data Context is a Python object that provides access to the configurations, metadata, and actions of your GX workflow components and the results of data validations.
 
@@ -65,7 +65,7 @@ All GX workflows start with the creation of a Data Context.
 
 For more information on the types of Data Context, see Create a [Data Context](https://docs.greatexpectations.io/docs/core/set_up_a_gx_environment/create_a_data_context).
 
-#### Connect to data
+### Connect to data
 
 A **Data Source** is the GX representation of a data store. The Data Source tells GX how to connect to your data, and supports connection to different types of data stores, including databases, schemas, and data files in cloud object storage.
 
@@ -75,7 +75,7 @@ A **Batch Definition** tells GX how to organize the records within a Data Asset.
 
 For more information on connecting to data, see [Connect to data](https://docs.greatexpectations.io/docs/core/connect_to_data/).
 
-#### Define Expectations
+### Define Expectations
 
 An **Expectation** is a verifiable assertion about data. Similar to assertions in traditional Python unit tests, Expectations provide a flexible, declarative language for describing expected data qualities. An Expectation can be used to validate a Batch of data.
 
@@ -85,7 +85,7 @@ An **Expectation Suite** is a collection of Expectations. Expectation Suites can
 
 For more information about defining Expectations and creating Expectation Suites, see [Define Expectations](https://docs.greatexpectations.io/docs/core/define_expectations/).
 
-#### Run Validations
+### Run Validations
 
 A **Validation Definition** explicitly associates a Batch Definition to an Expectation Suite, defining what data should be validated against which Expectations.
 
