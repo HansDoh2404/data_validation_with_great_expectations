@@ -1,0 +1,6 @@
+datasource_name = "churn_data_source"
+asset_name = "pd_churn_asset"
+expectation_suite_name="churn_expectation_suite"
+validation_name = "churn_batch_definition"
+checkpoint_name = "churn_checkpoint"
+batch_definition_name = "batch definition"
