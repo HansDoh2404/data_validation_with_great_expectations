@@ -64,9 +64,8 @@ You use a **Data Context** to define and run a GX workflow. The Data Context is 
 All GX workflows start with the creation of a Data Context.
 
 For more information on the types of Data Context, see Create a [Data Context](https://docs.greatexpectations.io/docs/core/set_up_a_gx_environment/create_a_data_context).
-Connect to data
 
-<br/>
+#### Connect to data
 
 A **Data Source** is the GX representation of a data store. The Data Source tells GX how to connect to your data, and supports connection to different types of data stores, including databases, schemas, and data files in cloud object storage.
 
@@ -75,8 +74,6 @@ A **Data Asset** is a collection of records within a Data Source. A useful analo
 A **Batch Definition** tells GX how to organize the records within a Data Asset. The Batch Definition Python object enables you to retrieve a **Batch**, or collection of records from a Data Asset, for validation at runtime. A Data Asset can be validated as a single Batch, or partitioned into multiple Batches for separate validations.
 
 For more information on connecting to data, see [Connect to data](https://docs.greatexpectations.io/docs/core/connect_to_data/).
-
-<br/>
 
 #### Define Expectations
 
