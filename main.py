@@ -26,5 +26,5 @@ validation_results = define_checkpoint(context, df, existing_checkpoints, valida
 print(validation_results)
 
 context.build_data_docs()
-# context.open_data_docs()
+context.open_data_docs()
 

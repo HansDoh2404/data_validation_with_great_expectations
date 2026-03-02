@@ -48,7 +48,7 @@ def define_valildation(context, existing_validations, batch_definition, suite, v
 def define_checkpoint(context, df, existing_checkpoints, validation_definition, action_list, checkpoint_name) :
 
     custom_run_id = RunIdentifier(
-        run_name="Hans Ariel Doh", 
+        run_name="Hans Ariel", 
         run_time=datetime.now()
     )
 
