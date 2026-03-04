@@ -2,9 +2,10 @@ import pandas as pd
 from expectations import gx
 from great_expectations.core.run_identifier import RunIdentifier
 from config import datasource_name, asset_name, expectation_suite_name, validation_name, checkpoint_name, batch_definition_name
-from utils import define_suite, define_valildation, define_checkpoint, define_batch_definition
+from utils import define_suite, define_valildation, define_checkpoint, define_batch_definition, reading_source_df
 
 df = pd.read_csv("data.csv")
+source_df = reading_source_df("telecom_churn")
 context = gx.get_context(mode="file")
 print(context)
 
@@ -19,7 +20,7 @@ action_list = [
 ]
 
 batch_definition = define_batch_definition(context, datasource_name, existing_sources, asset_name, batch_definition_name)
-suite = define_suite(context, df, existing_suites, expectation_suite_name)
+suite = define_suite(context, source_df, existing_suites, expectation_suite_name)
 validation_definition = define_valildation(context, existing_validations, batch_definition, suite, validation_name)
 validation_results = define_checkpoint(context, df, existing_checkpoints, validation_definition, action_list, checkpoint_name)
 

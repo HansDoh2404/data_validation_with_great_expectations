@@ -1,6 +1,12 @@
+import pandas as pd
 from expectations import gx, verify_all_distinct_values, verify_columns_number, verify_columns_values
 from great_expectations.core.run_identifier import RunIdentifier
 from datetime import datetime
+
+def reading_source_df(field_name) :
+    if field_name == "telecom_churn" :
+        df = pd.read_csv("source_df.csv")
+    return df
 
 def define_batch_definition(context, datasource_name, existing_sources, asset_name, batch_definition_name) :
     
@@ -19,13 +25,13 @@ def define_batch_definition(context, datasource_name, existing_sources, asset_na
     return batch_definition
 
 
-def define_suite(context, df, existing_suites, expectation_suite_name) :
+def define_suite(context, source_df, existing_suites, expectation_suite_name) :
 
     if expectation_suite_name in existing_suites :
         suite = context.suites.get(name=expectation_suite_name)
     else :
         suite = context.suites.add(gx.ExpectationSuite(name=expectation_suite_name))
-        data_expectations = [verify_all_distinct_values(df, "churn"), verify_columns_number(df), verify_columns_values(df)]
+        data_expectations = [verify_all_distinct_values(source_df, "churn"), verify_columns_number(source_df), verify_columns_values(source_df)]
         for ex in data_expectations :
             suite.add_expectation(ex)
 

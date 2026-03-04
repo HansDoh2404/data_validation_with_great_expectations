@@ -1,17 +1,17 @@
 import great_expectations as gx
 
-def verify_columns_number(df) :
+def verify_columns_number(source_df) :
     return gx.expectations.ExpectTableColumnCountToEqual(
-        value = df.shape[1]
+        value = source_df.shape[1]
     )
 
-def verify_columns_values(df) :
+def verify_columns_values(source_df) :
     return gx.expectations.ExpectTableColumnsToMatchSet(
-        column_set = list(df.columns)
+        column_set = list(source_df.columns)
     )
 
-def verify_all_distinct_values(df, col_name) :
+def verify_all_distinct_values(source_df, col_name) :
     return gx.expectations.ExpectColumnDistinctValuesToBeInSet(
         column=col_name,
-        value_set=df[col_name].unique().tolist()
+        value_set=source_df[col_name].unique().tolist()
     )
