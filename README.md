@@ -33,7 +33,7 @@
   </a>
 </p>
 
-**Data validation with great_expectations** : This project demonstrates how to use great_expectations to set up rules and validate a dataset before using it in more complex workflow.
+**Data validation with great_expectations** : This project explains and demonstrates how to use great_expectations to set up rules and validate a dataset before using it in more complex workflow.
 
 
 ## Overview
